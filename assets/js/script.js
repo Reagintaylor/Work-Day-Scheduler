@@ -32,9 +32,9 @@ currentDay.textContent = displayDay.format('MMMM Do YYYY, LTS');
 
 // saves event into local storage
 
-var times = document.querySelector(h4)
-var timeEvents = document.querySelector(textarea)
-var saveBtn = document.querySelector(button)
+var times = document.querySelector("h4")
+var timeEvents = document.querySelector("textarea")
+var saveBtn = document.querySelector("button")
 
 saveBtn.addEventListener("click", function(event) {
     event.preventDefault();
