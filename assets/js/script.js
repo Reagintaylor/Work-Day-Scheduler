@@ -58,44 +58,67 @@ function timeofDay(){
 
 // saves event into local storage
 
-var timeEvents = document.querySelector(".text")
-var saveBtn = document.querySelector(".savebtn")
-
-saveBtn.addEventListener("click", function(event) {
+var saveBtn = document.querySelector(".savebtnnine")
+saveBtn.addEventListener("click", function(event){
     event.preventDefault();
-    
-    // create user object from submission
-    var timeEventInfo = timeEvents.value.trim();
-  
-    // set new submission to local storage 
-    localStorage.setItem("timeEventInfo", JSON.stringify(timeEventInfo));
-    localStorage.getItem("timeEventInfo", JSON.stringify(timeEventInfo));
-    
-    // function setItem(){
-    //     $('#09 .text').val(localStorage.setItem('09'));
-    //     $('#10 .text').val(localStorage.setItem('10'));
-    //     $('#11 .text').val(localStorage.setItem('11'));
-    //     $('#12 .text').val(localStorage.setItem('12'));
-    //     $('#13 .text').val(localStorage.setItem('13'));
-    //     $('#14 .text').val(localStorage.setItem('14'));
-    //     $('#15 .text').val(localStorage.setItem('15'));
-    //     $('#16 .text').val(localStorage.setItem('16'));
-    //     $('#17 .text').val(localStorage.setItem('17'));
+    var timeInputsNine = document.querySelector(".text").value.trim();
+    localStorage.setItem("timeInputs09", timeInputsNine) 
+});
 
-    //     $('#09 .text').val(localStorage.getItem('09'));
-    //     $('#10 .text').val(localStorage.getItem('10'));
-    //     $('#11 .text').val(localStorage.getItem('11'));
-    //     $('#12 .text').val(localStorage.getItem('12'));
-    //     $('#13 .text').val(localStorage.getItem('13'));
-    //     $('#14 .text').val(localStorage.getItem('14'));
-    //     $('#15 .text').val(localStorage.getItem('15'));
-    //     $('#16 .text').val(localStorage.getItem('16'));
-    //     $('#17 .text').val(localStorage.getItem('17'));
-    // }
+var saveBtn = document.querySelector(".savebtnten")
+saveBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    var timeInputsTen = document.querySelector(".textten").value.trim();
+    localStorage.setItem("timeInputs10", timeInputsTen) 
+});
 
-//     var fivePM = document.querySelector(".17text").value.trim()
-//     localStorage.setItem("05PM", fivePM);
-//     var fiveOnPage = localStorage.getItem("05PM", fivePM);
-//     fiveOnPage.textContent = ""
-//     console.log(fivePM)
-  });
+var saveBtn = document.querySelector(".savebtnelev")
+saveBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    var timeInputsElev = document.querySelector(".textelev").value.trim();
+    localStorage.setItem("timeInputs11", timeInputsElev) 
+});
+
+var saveBtn = document.querySelector(".savebtntwel")
+saveBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    var timeInputsTwel = document.querySelector(".texttwel").value.trim();
+    localStorage.setItem("timeInputs12", timeInputsTwel) 
+});
+
+var saveBtn = document.querySelector(".savebtnthir")
+saveBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    var timeInputsThir = document.querySelector(".textthir").value.trim();
+    localStorage.setItem("timeInputs01", timeInputsThir) 
+});
+
+var saveBtn = document.querySelector(".savebtnfour")
+saveBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    var timeInputsFour = document.querySelector(".textfour").value.trim();
+    localStorage.setItem("timeInputs02", timeInputsFour) 
+});
+
+var saveBtn = document.querySelector(".savebtnfift")
+saveBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    var timeInputsFift = document.querySelector(".textfift").value.trim();
+    localStorage.setItem("timeInputs03", timeInputsFift) 
+});
+
+var saveBtn = document.querySelector(".savebtnsixt")
+saveBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    var timeInputsSixt = document.querySelector(".textsixt").value.trim();
+    localStorage.setItem("timeInputs04", timeInputsSixt) 
+});
+
+var saveBtn = document.querySelector(".savebtnsevt")
+saveBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    var timeInputsSevt = document.querySelector(".textsevt").value.trim();
+    localStorage.setItem("timeInputs05", timeInputsSevt) 
+});
+
+
