@@ -4,6 +4,11 @@ body {
   line-height: 1;
 }
 
+#boss {
+  height:auto;
+  width: 200px;
+}
+
 textarea {
   background: transparent;
   border: none;
@@ -57,15 +62,13 @@ textarea {
   color: white;
 }
 
-.saveBtn {
+.savebtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
 }
 
-.saveBtn i:hover {
+.savebtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
@@ -73,4 +76,9 @@ textarea {
 textarea {
   margin: 5px;
   padding: 5px;
+}
+
+#bolder {
+  font-weight:bolder;
+  color: red;
 }
