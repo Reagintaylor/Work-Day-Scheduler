@@ -15,6 +15,10 @@ Lastly, I was able to style the page to my liking. I went for an angry boos them
 ## Obstacles
 - I had a tough time foguring out how to do the local storage. 
 
+## Installation
+- 
+- https://reagintaylor.github.io/Work-Day-Scheduler/
+
 ## Usage
 - 
 
