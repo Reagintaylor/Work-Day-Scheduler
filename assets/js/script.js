@@ -3,40 +3,10 @@ var displayDay = moment();
 
 currentDay.textContent = displayDay.format('MMMM Do YYYY, LTS');
 
-// Called for the events to be displayed after page is refreshed
-
-
-// changes colors of the time blocks
-// var timeBlocks = $('h4')
-// var hour = today.format("HH");
-
-// for (var i = 0; i < blocks.length; i++) {
-    
-//     var eachBlock = timeBlocks[i];
-//     var val = eachBlock.getAttribute('data-time');
-    
-//     //checks if that time block is in the past
-//     if (val < hour) {
-//     //changes background color
-//     eachBlock.style.backgroundColor='#350002'
-//     //change text color
-//     document.querySelectorAll("h4")[i].style.color = "black";
-//     document.querySelectorAll("textarea")[i].style.color = "black";
-//     document.querySelectorAll("button")[i].style.color = "black";
-//     document.querySelectorAll("button")[i].style.background= '#350002';
-// }
-//     else if (val == hour) {
-//     // changes background color
-//     oneBlock.style.backgroundColor='#fd7b02';
-    
-//     //change text color
-//     document.querySelectorAll("h5")[i].style.color = "white";
-// }};
-
 
 // Assigning the time blocks colors based on time
 
-// var hour = today.format("HH");
+var hour = today.format("HH"); //write if hour === date-time etc...
 function timeofDay(){
     if (date.prototype.getHours === hour){
         var present = querySelector(".present");
