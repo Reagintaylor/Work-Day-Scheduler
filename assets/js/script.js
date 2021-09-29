@@ -8,38 +8,30 @@ currentDay.textContent = displayDay.format('MMMM Do YYYY, LTS');
 
 //Change page as time changes
 //grabs current hour
-var hour = today.format("HH");
-var blocks = $('[date-time]') 
+var hour = displayDay.format("HH");
+var blocks = $('[data-time]') 
 
 for (var i=0; i<blocks.length; i++) {
     //grabs specific block
     var oneBlock = blocks[i];
-    var val = oneBlock.getAttribute('date-time')
+    var val = oneBlock.getAttribute('data-time')
     
-    //checks if that time block is in the past
+    //past time block
 if (val < hour) {
-    document.querySelector("textarea").setAttribute(class, ".past")
-    
-
-    // //changes background color
-    // oneBlock.style.backgroundColor='#350002'
-    // //change text color
-    // document.querySelectorAll("h5")[i].style.color = "black";
-    // document.querySelectorAll("textarea")[i].style.color = "black";
-    // document.querySelectorAll("button")[i].style.color = "black";
-    // document.querySelectorAll("button")[i].style.background= '#350002';
-}
+    function addNewClass(textarea){   
+        textarea.className=".past"; 
+    }
+}   //present time block
 else if (val === hour) {
-    document.querySelector("textarea")
-    val.setAttribute(class, ".present")
-    // changes background color
-    // oneBlock.style.backgroundColor='#fd7b02';
-    
-    // //change text color
-    // document.querySelectorAll("h5")[i].style.color = "white";
-}
+
+    function addNewClass(textarea){
+        textarea.className=".present"; 
+    }
+}   //future time block
 else {
-    val.setAttribute(class, ".future")
+    function addNewClass(textarea){   
+        textarea.className=".future"; 
+    }
 }
 };
 
