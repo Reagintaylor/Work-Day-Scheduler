@@ -6,24 +6,41 @@ currentDay.textContent = displayDay.format('MMMM Do YYYY, LTS');
 
 // Assigning the time blocks colors based on time
 
-var hour = today.format("HH"); //write if hour === date-time etc...
-function timeofDay(){
-    if (date.prototype.getHours === hour){
-        var present = querySelector(".present");
-        var presentStyle = getComputedStyle(present);
-        setAttribute(presentStyle);
-    }
-    else if (date.prototype.getHours < hour){
-        var past = querySelector(".past");
-        var pastStyle = getComputedStyle(past);
-        setAttribute(pastStyle);
-    }
-    else {
-        var future = querySelector(".future");
-        var futureStyle = getComputedStyle(future);
-        setAttribute(futureStyle);
-    }
+//Change page as time changes
+//grabs current hour
+var hour = today.format("HH");
+var blocks = $('[date-time]') 
 
+for (var i=0; i<blocks.length; i++) {
+    //grabs specific block
+    var oneBlock = blocks[i];
+    var val = oneBlock.getAttribute('date-time')
+    
+    //checks if that time block is in the past
+if (val < hour) {
+    document.querySelector("textarea").setAttribute(class, ".past")
+    
+
+    // //changes background color
+    // oneBlock.style.backgroundColor='#350002'
+    // //change text color
+    // document.querySelectorAll("h5")[i].style.color = "black";
+    // document.querySelectorAll("textarea")[i].style.color = "black";
+    // document.querySelectorAll("button")[i].style.color = "black";
+    // document.querySelectorAll("button")[i].style.background= '#350002';
+}
+else if (val === hour) {
+    document.querySelector("textarea")
+    val.setAttribute(class, ".present")
+    // changes background color
+    // oneBlock.style.backgroundColor='#fd7b02';
+    
+    // //change text color
+    // document.querySelectorAll("h5")[i].style.color = "white";
+}
+else {
+    val.setAttribute(class, ".future")
+}
 };
 
 // saves event into local storage
