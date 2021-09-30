@@ -46,40 +46,47 @@ for (var i = 9; i<= 17; i++) {
          console.log('get here')
         //grabs each block that is past the current hour and change it to grey
          document.getElementById(i).style.backgroundColor = 'grey';
+         document.getElementById(i).style.color = 'white';
 
          //current schedule events
      } else if ([i] == hour) {
         document.getElementById(i).style.backgroundColor = 'green';
+        document.getElementById(i).style.color = 'white';
         //future schedule events
      } else {
         ([i] > hour)
         document.getElementById(i).style.backgroundColor = 'red'; 
+        document.getElementById(i).style.color = 'white';
      }
 };
 
 
 
 
+// Trying to render on page with these before I try with the rest
+// saves event into local storage, hard coded
 
-// saves event into local storage
-
+function renderNine() {
 var saveBtn = document.querySelector(".savebtnnine")
 saveBtn.addEventListener("click", function(event){
-    event.preventDefault();
-    var timeInputsNine = document.querySelector(".text").value.trim();
+    var dataTime = event.target.dataset.hour
+    var timeInputsNine = document.getElementById(dataTime).value.trim();
     localStorage.setItem("timeInputs09", timeInputsNine) 
 });
-
+}
+//
+function renderTen() {
 var saveBtn = document.querySelector(".savebtnten")
 saveBtn.addEventListener("click", function(event){
-    event.preventDefault();
-    var timeInputsTen = document.querySelector(".textten").value.trim();
-    localStorage.setItem("timeInputs10", timeInputsTen) 
+    var dataTime = event.target.dataset.hour
+    var timeInputsTen = document.getElementById(dataTime + "hour").value.trim()
+    localStorage.setItem("timeInputs10", timeInputsTen); 
 });
+}
 
 var saveBtn = document.querySelector(".savebtnelev")
 saveBtn.addEventListener("click", function(event){
-    event.preventDefault();
+    
     var timeInputsElev = document.querySelector(".textelev").value.trim();
     localStorage.setItem("timeInputs11", timeInputsElev) 
 });
@@ -126,4 +133,4 @@ saveBtn.addEventListener("click", function(event){
     localStorage.setItem("timeInputs05", timeInputsSevt) 
 });
 
-
+renderTen();
