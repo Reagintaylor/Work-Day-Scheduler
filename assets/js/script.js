@@ -1,39 +1,65 @@
 var currentDay = document.querySelector("#currentDay");
 var displayDay = moment();
 
-currentDay.textContent = displayDay.format('MMMM Do YYYY, LTS');
+currentDay.textContent = displayDay.format("MMMM Do, YYYY, HH:mm A");
 
 
 // Assigning the time blocks colors based on time
 
-//Change page as time changes
-//grabs current hour
-var hour = displayDay.format("HH");
-var blocks = $('[data-time]') 
+// //Change page as time changes
+// //grabs current hour
+// var hour = displayDay.format("HH");
+// var blocks = $('[data-time]') 
 
-for (var i=0; i<blocks.length; i++) {
-    //grabs specific block
-    var oneBlock = blocks[i];
-    var val = oneBlock.getAttribute('data-time')
+// for (var i=0; i<blocks.length; i++) {
+//     //grabs specific block
+//     var oneBlock = blocks[i];
+//     var val = oneBlock.getAttribute('data-time')
     
-    //past time block
-if (val < hour) {
-    function addNewClass(textarea){   
-        textarea.className=".past"; 
-    }
-}   //present time block
-else if (val === hour) {
+//     //past time block
+// if (val < hour) {
+//     function addNewClass(textarea){   
+//         textarea.className=(".past"); 
+//     }
+// }   //present time block
+// else if (val === hour) {
 
-    function addNewClass(textarea){
-        textarea.className=".present"; 
-    }
-}   //future time block
-else {
-    function addNewClass(textarea){   
-        textarea.className=".future"; 
-    }
+//     function addNewClass(textarea){
+//         textarea.className=".present"; 
+//     }
+// }   //future time block
+// else {
+//     function addNewClass(textarea){   
+//         textarea.className=".future"; 
+//     }
+// }
+// };
+
+var hour = moment().format("HH"); 
+var colorBlocking = {
+
 }
+for (var i = 9; i<= 17; i++) {
+//     //checks if that time block is in the past
+     if ([i] < hour) {
+         //see what number hour is current
+         console.log('get here')
+        //grabs each block that is past the current hour and change it to grey
+         document.getElementById(i).style.backgroundColor = 'grey';
+
+         //current schedule events
+     } else if ([i] == hour) {
+        document.getElementById(i).style.backgroundColor = 'green';
+        //future schedule events
+     } else {
+        ([i] > hour)
+        document.getElementById(i).style.backgroundColor = 'red'; 
+     }
 };
+
+
+
+
 
 // saves event into local storage
 
