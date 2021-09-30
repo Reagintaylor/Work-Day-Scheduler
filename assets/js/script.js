@@ -123,7 +123,8 @@ var saveBtn = document.querySelector(".savebtnsixt")
 saveBtn.addEventListener("click", function(event){
     event.preventDefault();
     var timeInputsSixt = document.querySelector(".textsixt").value.trim();
-    localStorage.setItem("timeInputs04", timeInputsSixt) 
+    localStorage.setItem("timeInputs04", timeInputsSixt)
+    localStorage.getItem 
 });
 
 var saveBtn = document.querySelector(".savebtnsevt")
