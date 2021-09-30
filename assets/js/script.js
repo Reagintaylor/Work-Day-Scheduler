@@ -69,8 +69,8 @@ for (var i = 9; i<= 17; i++) {
 function renderNine() {
 var saveBtn = document.querySelector(".savebtnnine")
 saveBtn.addEventListener("click", function(event){
-    var dataTime = event.target.dataset.hour
-    var timeInputsNine = document.getElementById(dataTime).value.trim();
+    event.target.dataset.hour
+    var timeInputsNine = document.querySelector(".textnine").value.trim();
     localStorage.setItem("timeInputs09", timeInputsNine) 
 });
 }
@@ -78,15 +78,15 @@ saveBtn.addEventListener("click", function(event){
 function renderTen() {
 var saveBtn = document.querySelector(".savebtnten")
 saveBtn.addEventListener("click", function(event){
-    var dataTime = event.target.dataset.hour
-    var timeInputsTen = document.getElementById(dataTime + "hour").value.trim()
+    event.target.dataset.hour
+    var timeInputsTen = document.querySelector(".textten").value.trim()
     localStorage.setItem("timeInputs10", timeInputsTen); 
 });
 }
 
 var saveBtn = document.querySelector(".savebtnelev")
 saveBtn.addEventListener("click", function(event){
-    
+    event.target.dataset.hour
     var timeInputsElev = document.querySelector(".textelev").value.trim();
     localStorage.setItem("timeInputs11", timeInputsElev) 
 });
